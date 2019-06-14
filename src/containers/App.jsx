@@ -17,13 +17,7 @@ export default class App extends Component {
 
         this.state = {}
      }
-    componentDidMount(){
-       setInterval(async()=>{
-        const response = await reqUser();
-         const reslut =response.data;
-         console.log(reslut)
-      },10000 )
-    }
+
     render() {
         return <div>
           <NavBar>智能垃圾桶</NavBar>

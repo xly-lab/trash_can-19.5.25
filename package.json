@@ -43,5 +43,5 @@
     "less": "^2.7.3",
     "less-loader": "^5.0.0"
   },
-  "proxy": "http://api.douban.com"
+  "proxy": "http://123.57.61.227"
 }

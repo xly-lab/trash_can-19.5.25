@@ -5,33 +5,46 @@
 import React, {Component} from 'react'
 import {Progress} from 'antd-mobile'
 import PubSub from 'pubsub-js'
+import {reqData} from '../api'
 
 export default class  Cur_Location extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-          proportion:0,
-          IsFull:false
+          proportion:0,//proportion用来存储垃圾桶的多少占比/或使用多少
+          IsFull:false,//垃圾桶是否满了
+          posts:''
         }
     }
     componentDidMount(){
-      let {proportion} =this.state;
-      setInterval(()=>{
-        proportion+=10;
+      // axios.get('http://123.57.61.227:8080/Web_war/detection')
+      //
+      //   .then(res => {
+      //
+      //     const posts = res.data.data.children.map(obj => obj.data);
+      //
+      //     this.setState({ posts });
+      //
+      //   });
+
+      setInterval(async ()=>{
+        //此处发送ajax请求
+        const response = await reqData();
+        let proportion= response.data.percentage*100;
+        console.log(proportion);
         if(proportion>=80){
           this.setState({IsFull:true})
         }else{
           this.setState({IsFull:false})
         }
-
         if(proportion>100){
           proportion=0;
            const Time = Date.now();
            PubSub.publish('sendTime',Time)
          }
         this.setState({proportion})
-      },1000)
+      },1000*10)
     };
 
     render() {

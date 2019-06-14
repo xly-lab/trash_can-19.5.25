@@ -11,7 +11,7 @@ export default class  Hosi_Time extends Component {
         super(props);
 
         this.state = {
-          Times:[]
+          Times:[]//用来存储满溢时间的，只存放三个
         }
     }
     componentDidMount(){
