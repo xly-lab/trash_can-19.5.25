@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/myapp/static/css/main.66b6aded.chunk.css",
+    "main.js": "/myapp/static/js/main.af009b21.chunk.js",
+    "main.js.map": "/myapp/static/js/main.af009b21.chunk.js.map",
+    "runtime~main.js": "/myapp/static/js/runtime~main.e4f53ea3.js",
+    "runtime~main.js.map": "/myapp/static/js/runtime~main.e4f53ea3.js.map",
+    "static/css/2.4aa378bc.chunk.css": "/myapp/static/css/2.4aa378bc.chunk.css",
+    "static/js/2.7c9f4262.chunk.js": "/myapp/static/js/2.7c9f4262.chunk.js",
+    "static/js/2.7c9f4262.chunk.js.map": "/myapp/static/js/2.7c9f4262.chunk.js.map",
+    "index.html": "/myapp/index.html",
+    "precache-manifest.6fbaa3a3779363e13008a534268d5cef.js": "/myapp/precache-manifest.6fbaa3a3779363e13008a534268d5cef.js",
+    "service-worker.js": "/myapp/service-worker.js",
+    "static/css/2.4aa378bc.chunk.css.map": "/myapp/static/css/2.4aa378bc.chunk.css.map",
+    "static/css/main.66b6aded.chunk.css.map": "/myapp/static/css/main.66b6aded.chunk.css.map",
+    "static/media/mui.min.css": "/myapp/static/media/mui.8820b7f6.ttf"
+  }
+}
