@@ -15,7 +15,8 @@ export default class Location extends Component {
     }
     setLocation=()=>{
       const locaName =JSON.parse(localStorage.getItem('chooseLocation'));
-      this.setState({locaName});
+      if(locaName){this.setState({locaName});}
+
     };
     componentDidMount(){
       this.setLocation()

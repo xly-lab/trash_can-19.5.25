@@ -15,7 +15,11 @@ export default class  Hosi_Time extends Component {
         }
     }
     componentDidMount(){
-      const newLocation =JSON.parse(localStorage.getItem('chooseLocation'));
+      let newLocation =JSON.parse(localStorage.getItem('chooseLocation'));
+      // console.log(newLocation);
+      if(!newLocation){
+        newLocation='思学楼';
+      }
       const Times =[];
       PubSub.subscribe('sendTime',(msg,Time)=>{
         const time=moment(Time).format('YY.MM.DD HH:mm:ss');
@@ -23,15 +27,12 @@ export default class  Hosi_Time extends Component {
         if(Times.length>3){
           Times.pop();
         }
+        console.log(Times);
         const targetTime ={time:Times[0],newLocation};
         PubSub.publish('sendFirTime',targetTime);
         this.setState({Times})
       });
-
-
-
     }
-
     render() {
 
           const {Times} = this.state;
