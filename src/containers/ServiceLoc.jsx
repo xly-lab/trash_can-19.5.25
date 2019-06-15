@@ -23,10 +23,11 @@ export default class ServiceLoc extends Component {
       this.location=e.target.innerText;
       console.log(this.location);
         alert('Choose', `Are you sure ${this.location}`, [
-          { text: 'Cancel', onPress: () => console.log('cancel') },
+          { text: 'Cancel', onPress: () => {} },
           { text: 'Ok', onPress: () =>
             {
-              console.log('ok');
+              this.props.history.replace('/app');
+              // console.log('ok');
               localStorage.setItem('chooseLocation',JSON.stringify(this.location))
               }
             },
@@ -38,7 +39,7 @@ export default class ServiceLoc extends Component {
 
           <NavBar className='am-navbar1'
           mode="dark"
-          leftContent="Back"
+          leftContent="返回"
           onLeftClick={()=>this.props.history.replace('/app')}
         >选择所在地</NavBar>
           <div className="choose" style={{paddingTop:'45px'}}>

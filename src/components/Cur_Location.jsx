@@ -71,7 +71,6 @@ export default class  Cur_Location extends Component {
           <div className="mui-content">
             <div className="mui-card">
               <ul className="mui-table-view">
-
                 <li className="mui-table-view-divider">垃圾桶状态</li>
                 <li className="mui-table-view-cell">当前垃圾桶情况
                   <Progress
