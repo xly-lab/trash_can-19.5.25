@@ -19,12 +19,15 @@ export default class  Cur_Location extends Component {
     }
      componentDidMount(){
         reqData()
-          .then((data)=>this.setState(
-            {
+          .then((data)=>{
+            if(data.data.percentage>0.9){
+              this.setState({IsFull:true})
+            }
+            this.setState({
               proportion:data.data.percentage*100,
               status:data.data.status
             }
-            ));//保证初始状态
+            )});//保证初始状态
 
       // const {IsFull} =this.state;
       setInterval(async ()=>{//每十秒发送一次请求判断垃圾桶容量
